@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
 const morgan = require('morgan');
-
+require('dotenv').config();
 const app = express();
 
 app.use(cors());
@@ -23,7 +23,9 @@ const db = knex({
 });
 
 
-app.get('/', function (req, res) {  res.send("Funionando");});
+app.get('/', function (req, res) {  
+  res.send('Funcionando')
+});
 
 //Porta no qual servidor será hospedado
 app.listen(3000, ()=> {  console.log('app is running on port 3000');})

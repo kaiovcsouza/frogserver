@@ -21,6 +21,7 @@
     "redis": "^2.8.0"
   },
   "devDependencies": {
+    "dotenv": "^6.0.0",
     "nodemon": "^1.18.3"
   }
 }

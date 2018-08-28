@@ -24,16 +24,6 @@ const db = knex({
   }
 });
 
-// const dados = db.select('*').from('users').where('id', 3)
-// .then(user => {
-//   if (!user[0]) {
-//     console.log('Nada')
-//   } else {
-//     console.log(user[0].id)
-//   }
-// })
-// .catch(err => console.log('Não encontrado'));
-
 app.get('/', function (req, res) { res.send('SERVIDOR ON') });
 
 app.post('/signin', signin.signinAuthentication(db, bcrypt))
